@@ -50,6 +50,8 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@dcloudio/types": "^2.5.17",
     "@dcloudio/uni-automator": "3.0.0-alpha-3031320220314001",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3031320220314001",
