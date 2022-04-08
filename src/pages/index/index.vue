@@ -1,23 +1,28 @@
 <template>
   <view class="content">
     <view class="text-area">
-      <text class="title">{{ title }}</text>
+      <text class="title">
+        {{ title }}
+      </text>
     </view>
+
+    <view> 我是一条鱼 </view>
   </view>
 </template>
 
 <script setup>
-  import { onLoad, onShow } from '@dcloudio/uni-app'
-  import { ref } from "vue"
-  onLoad((options) => {
-    console.log(options)
-    console.log('hello')
-  })
-  onShow(() => {
-    console.log('onshow')
-  })
+import { onLoad, onShow } from "@dcloudio/uni-app";
+import { onMounted, ref } from "vue";
+import { useMapState } from "@/hooks/useMapState";
 
-  const title = ref('hello world')
+const token = useMapState("token");
+console.log(token);
+
+onLoad((options) => {});
+onShow(() => {});
+onMounted(() => {});
+
+const title = ref("hello world");
 </script>
 
 <style scoped lang="scss">
