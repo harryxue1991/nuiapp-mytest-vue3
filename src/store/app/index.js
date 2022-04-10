@@ -1,7 +1,7 @@
 export const store = {
   state: {
-    token: "abc",
+    token: "this is my token",
   },
-  actions: {},
   mutations: {},
+  actions: {},
 };

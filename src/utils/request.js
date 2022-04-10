@@ -17,7 +17,8 @@ function baseRequest(
   params
 ) {
   const store = useStore();
-  const token = store.state.app.token;
+  const token = store.getters.token;
+
   const Url = HTTP_REQUEST_URL;
   let header = JSON.parse(JSON.stringify(HEADER));
   if (params != undefined) {
@@ -43,13 +44,12 @@ function baseRequest(
       header: header,
       data: data || {},
       success: (res) => {
-        console.log("res", res);
         uni.hideLoading();
-        res.data.token &&
-          res.data.token !== "null" &&
-          store.commit("LOGIN", {
-            token: res.data.token,
-          });
+        // res.data.token &&
+        //   res.data.token !== "null" &&
+        //   store.commit("LOGIN", {
+        //     token: res.data.token,
+        //   });
         if (noVerify) {
           reslove(res);
         } else if (res.statusCode === 200) {
