@@ -81,7 +81,7 @@ const requestOptions = [
 const request = {};
 
 requestOptions.forEach((method) => {
-  const m = method.toUpperCase;
+  const m = method.toUpperCase();
   request[method] = (api, data, opt, params) =>
     baseRequest(api, m, data, opt || {}, params);
 });
